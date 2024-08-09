@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Assuming your dataset is loaded into a DataFrame called 'ADNI'
+# and the class labels are stored in a column named 'DX_bl'
+
+# Filter the data for LMCI and EMCI classes
+lmci_emci_data = ADNI[ADNI['DX_bl'].isin(['LMCI', 'EMCI'])]
+
+# Get the descriptive statistics for the filtered data
+lmci_emci_summary = lmci_emci_data.describe()
+
+# Display the summary
+print(lmci_emci_summary)
